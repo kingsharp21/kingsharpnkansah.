@@ -1,0 +1,94 @@
+.contact_me{
+    height: 100vh;
+    /* background: var(--black-color); */
+    /* background-color: var(--soft-black-color); */
+    /* background-color: orange; */
+}
+.contact_me .wrapper{
+    margin-top: 2rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background-color: bisque; */
+}
+.contact_me .wrapper.grid{
+    gap: 3rem;
+}
+.contact-me-header.flex{
+    flex-direction: column;
+}
+.contact_me .wrapper .heading{
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 1.3;
+    max-width: unset;
+    margin: 0;
+    color: var(--primary-color);
+    color: var(--black-color);
+}
+.contact_me .wrapper span{
+    margin: 0 auto;
+    font-size: 1.2rem;
+    line-height: 1.2;
+    margin: 0;
+    margin-top: 15px;
+    letter-spacing: 0.02em;
+    max-width: 401px;
+    text-align: center;
+    color: white;
+    color: var(--soft-black-color);
+}
+.visitor-details.grid{
+    gap: 4rem;
+}
+.visitor-details .detail-col1.flex{
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+}
+.visitor-details .detail-col1 label,
+.message-col label{
+    margin: 8px 0;
+    color: var(--soft-black-color);
+}
+.visitor-details .detail-col1 input{
+    border: none;
+    border-bottom: .51px solid var(--black-color);
+    padding: .6rem 0;
+    width: 18rem;
+    background-color: transparent;
+    color: var(--black-color);
+    font-size: 1rem;
+}
+form{
+    display: flex;
+    flex-direction: column;
+
+}
+.message-col.flex{
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+}
+.message-col textarea{
+    width: 100%;
+    border: none;
+    padding: 1rem 0;
+    max-height: 3.4rem;
+    overflow: scroll;
+    border-bottom: 1px solid var(--black-color);
+    background: transparent;
+    font-size: .9rem;
+    font-weight: 200;
+}
+.message-col textarea:focus,
+.visitor-details .detail-col1 input:focus{
+    outline: none;
+    background-color: transparent;
+}
+#send-btn{
+    align-self: center;
+}

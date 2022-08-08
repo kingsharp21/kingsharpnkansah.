@@ -1,0 +1,48 @@
+#section-nav{
+    height: 100px;
+    position: absolute;
+    bottom: 3.5rem;
+    right: 5rem;
+    z-index: 1000;
+}
+#section-nav .wrapper{
+    height: 100%;
+    flex-direction: column;
+    padding: 0;
+}
+#section-nav .wrapper ul.flex{
+    flex-direction: column;
+}
+#section-nav .wrapper ul li button{
+    width: 10px;
+    height: 10px;
+    margin-bottom: 5px;
+    border-radius: 2px;
+    border: none;
+    background-color: var(--black-color);
+    background-color: var(--primary-color);
+    /* background-color: white; */
+    transition: 1s all linear;
+    cursor: pointer;
+}
+#section-nav .wrapper ul li button.current{
+    transform: rotate(45deg);
+    background-color: var(--black-color);
+}
+@media screen and (max-width: 54em) { 
+}
+
+@media screen and (max-width: 40em) {
+}
+
+@media screen and (max-width: 36em) {
+}
+
+@media screen and (max-width: 32em) {
+}
+
+@media screen and (max-width: 28em) {
+    #section-nav{
+        display: none;
+    }
+}
