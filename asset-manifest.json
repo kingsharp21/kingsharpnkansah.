@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/kingsharpnkansah./static/css/main.114e083b.css",
-    "main.js": "/kingsharpnkansah./static/js/main.9fa2e714.js",
+    "main.css": "/kingsharpnkansah./static/css/main.9ecf8cc5.css",
+    "main.js": "/kingsharpnkansah./static/js/main.9481a1f1.js",
     "static/media/avatar on floor-with-phone.png": "/kingsharpnkansah./static/media/avatar on floor-with-phone.904a15a29c1b1b448ae6.png",
     "static/media/handsome2.jpg": "/kingsharpnkansah./static/media/handsome2.3731770d19dda5703299.jpg",
     "static/media/happy-robot-assistant-waving-hello.png": "/kingsharpnkansah./static/media/happy-robot-assistant-waving-hello.48403327a20ec59f3e08.png",
@@ -11,11 +11,11 @@
     "static/media/web2.jpg": "/kingsharpnkansah./static/media/web2.af443d5a7f938d80867e.jpg",
     "static/media/web1.jpg": "/kingsharpnkansah./static/media/web1.e25493239f86d2b156be.jpg",
     "index.html": "/kingsharpnkansah./index.html",
-    "main.114e083b.css.map": "/kingsharpnkansah./static/css/main.114e083b.css.map",
-    "main.9fa2e714.js.map": "/kingsharpnkansah./static/js/main.9fa2e714.js.map"
+    "main.9ecf8cc5.css.map": "/kingsharpnkansah./static/css/main.9ecf8cc5.css.map",
+    "main.9481a1f1.js.map": "/kingsharpnkansah./static/js/main.9481a1f1.js.map"
   },
   "entrypoints": [
-    "static/css/main.114e083b.css",
-    "static/js/main.9fa2e714.js"
+    "static/css/main.9ecf8cc5.css",
+    "static/js/main.9481a1f1.js"
   ]
 }
