@@ -1,10 +1,38 @@
-import React, { useState } from 'react';
-import anime from 'animejs/lib/anime.es.js';
+import React, { useState, useEffect } from 'react';
+import { motion, Variants } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useAnimation } from "framer-motion";
+import { useSelector, useDispatch } from 'react-redux'
+
+
 import './navbar.css'
-import logo from '../../assets/img/page_logo.svg'
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import GitHubIcon from '@mui/icons-material/GitHub';
+
 function Navbar() {
+    const [color, setColor] = useState('white')
+    const showcasePage = useSelector(state => state.inview.value.showcase)
+    const aboutPage = useSelector(state => state.inview.value.about)
+    const projectPage = useSelector(state => state.inview.value.projects)
+    const contactPage = useSelector(state => state.inview.value.contact)
+
+    // const before = document.querySelector('.menu-btn_burger::before');
+    // const after = document.querySelector('.menu-btn_burger::after');
+
+    useEffect(() => {
+        if (showcasePage.payload == true) {
+            setColor('#EEA1BE')
+        } else if (aboutPage.payload === true) {
+            setColor('#420FE7')
+        } else if (projectPage.payload == true) {
+            setColor('#18033C')
+        } else if (contactPage.payload == true) {
+            // setColor('#18033C')
+            setColor('#F3F2F4')
+        }
+        // console.log(typeof (aboutPage.payload) + aboutPage.payload);
+        // console.log(typeof (projectPage.payload) + projectPage.payload);
+
+    })
+
     const [btnOpen, setBtnOpen] = useState(false);
     const [btnAction, setBtnAction] = useState('');
     const [menu, setMenu] = useState('hidden');
@@ -26,39 +54,29 @@ function Navbar() {
             setMenu('hidden')
         }
     }
-    const svg = document.querySelector('.logo-img path')
-    anime({
-        targets: svg,
-        strokeDashoffset: [anime.setDashoffset, 0],
-        easing: 'easeInOutSine',
-        duration: 1500,
-        // delay: function(el, i) { return i * 250 },
-        direction: 'alternate',
-        loop: true
-      });
+
 
     return (
-        <nav className=''>
-            <div className='nav-wrapper wrapper flex' >
+        <nav>
+            <div className='nav-wrapper flex' >
                 <div className="nav-left-side flex " >
-                    {/* <div className="logo-img"></div> */}
-                    <svg className="logo-img" fill="#000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32px" height="32px">
-                        <path d="M 14.519531 4.0097656 C 14.239531 3.9997656 14 4.2295312 14 4.5195312 L 14 6.5 C 14 6.78 14.22 7 14.5 7 L 14.5 7.0195312 C 20.73 7.2595312 25.740469 12.27 25.980469 18.5 L 26 18.5 C 26 18.78 26.22 19 26.5 19 L 28.480469 19 C 28.770469 19 29.000234 18.760469 28.990234 18.480469 C 28.720234 10.620469 22.379531 4.2797656 14.519531 4.0097656 z M 14.519531 9.0097656 C 14.239531 8.9997656 14 9.2395313 14 9.5195312 L 14 11.5 C 14 11.78 14.22 12 14.5 12 L 14.5 12.029297 C 17.97 12.259297 20.740703 15.03 20.970703 18.5 L 21 18.5 C 21 18.78 21.22 19 21.5 19 L 23.480469 19 C 23.760469 19 24.000234 18.760469 23.990234 18.480469 C 23.720234 13.380469 19.619531 9.2797656 14.519531 9.0097656 z M 5.5 10 C 5.22 10 5 10.22 5 10.5 L 5 21.5 C 5 25.08 7.92 28 11.5 28 C 15.08 28 18 25.08 18 21.5 C 18 17.92 15.08 15 11.5 15 C 11.22 15 11 15.22 11 15.5 L 11 18.5 C 11 18.78 11.22 19 11.5 19 C 12.88 19 14 20.12 14 21.5 C 14 22.88 12.88 24 11.5 24 C 10.12 24 9 22.88 9 21.5 L 9 10.5 C 9 10.22 8.78 10 8.5 10 L 5.5 10 z" />
+                    {/* <div className='logo-img'></div> */}
+                    <svg xmlns="http://www.w3.org/2000/svg" width="70.672" height="40.267" viewBox="0 0 500.672 600.267" fill={color}>
+                        <g id="Group_1" data-name="Group 1" transform="translate(-648.328 -230.364)">
+                            <rect id="Rectangle_5" data-name="Rectangle 5" width="140" height="571" rx="75" transform="matrix(0.719, 0.695, -0.695, 0.719, 1044.978, 230.364)" />
+                            <rect id="Rectangle_3" data-name="Rectangle 3" width="140" height="360" rx="75" transform="matrix(0.719, 0.695, -0.695, 0.719, 1150.39, 382.47)" />
+                            <circle id="Ellipse_2" data-name="Ellipse 2" cx="65" cy="65" r="65" transform="translate(668 252)" />
+                            <circle id="Ellipse_4" data-name="Ellipse 4" cx="65" cy="65" r="65" transform="translate(1246 252)" />
+                        </g>
                     </svg>
+                    {/* <h3 className='akwaaba'>Akwaaba</h3> */}
                 </div>
                 <div className="nav-rigth-side flex">
-                    <div className={`menu-btn ${btnAction}`} onClick={toggle}>
-                        <div className="menu-btn_burger"></div>
+                    <div className={`menu-btn ${btnAction}`} onClick={toggle} >
+                        <div className="menu-btn_burger" style={{ backgroundColor: color }}></div>
+                        {/* <div className="menu-btn_burger" style={{backgroundColor:color}}></div>
+                        <div className="menu-btn_burger" style={{backgroundColor:color}}></div> */}
                     </div>
-                    {/* <div className='nav-social'>
-                    <a aria-label='social icon linked in' className='social-icon' href="#" target='_blank'><LinkedInIcon/></a>
-                    <span className='nav-title title'>Linked In</span>
-                    </div>
-                    <div className='nav-social'>
-                    <a aria-label='GitHub repository' className='nav-title social-icon' href="#" target='_blank'><GitHubIcon/></a>
-                    <span className='nav-title title'>GitHub repository</span>
-                    </div> */}
-                    {/* <button className='nav-btn btn'>Contact Me</button> */}
                 </div>
                 <Toggle_meun menu={menu} />
                 <Backdrop close={close} menu={menu} />
@@ -67,28 +85,113 @@ function Navbar() {
     );
 }
 
-
 const Toggle_meun = ({ menu }) => {
+
+    const { ref, inView } = useInView({ threshold: 0.2 });
+    const animation = useAnimation()
+    const animation2 = useAnimation()
+    const animation3 = useAnimation()
+    const animation4 = useAnimation()
+    const animation5 = useAnimation()
+    const animation6 = useAnimation()
+    const animation7 = useAnimation()
+    const animation8 = useAnimation()
+    const animation9 = useAnimation()
+
+    useEffect(() => {
+        if (inView) {
+            animation.start({
+                y: 0, opacity: 1,
+                transition: { type: 'spring', duration: 1, delay: .1 }
+            })
+            animation2.start({
+                y: 0, opacity: 1,
+                transition: { type: 'spring', duration: 1, delay: .2 }
+            })
+            animation3.start({
+                y: 0, opacity: 1,
+                transition: { type: 'spring', duration: 1, delay: .3 }
+            })
+            animation4.start({
+                y: 0, opacity: 1,
+                transition: { type: 'spring', duration: 1, delay: .4 }
+            })
+            animation5.start({
+                y: 0, opacity: 1,
+                transition: { type: 'spring', duration: 1, delay: .5 }
+            })
+            animation6.start({
+                y: 0, opacity: 1,
+                transition: { type: 'spring', duration: 1, delay: .6 }
+            })
+            animation7.start({
+                y: 0, opacity: 1,
+                transition: { type: 'spring', duration: 1, delay: 1 }
+            })
+            animation8.start({
+                y: 0, opacity: 1,
+                transition: { type: 'spring', duration: 1, delay: 1.2 }
+            })
+            animation9.start({
+                y: 0, opacity: 1,
+                transition: { type: 'spring', duration: 1, delay: 1.4 }
+            })
+        }
+        if (!inView) {
+            animation.start({
+                y: 10, opacity: 0
+            })
+            animation2.start({
+                y: 10, opacity: 0
+            })
+            animation3.start({
+                y: 10, opacity: 0
+            })
+            animation4.start({
+                y: 10, opacity: 0
+            })
+            animation5.start({
+                y: 10, opacity: 0
+            })
+            animation6.start({
+                y: 10, opacity: 0
+            })
+            animation7.start({
+                y: 10, opacity: 0
+            })
+            animation8.start({
+                y: 10, opacity: 0
+            })
+            animation9.start({
+                y: 10, opacity: 0
+            })
+        }
+        // console.log('inView : ' , inView);
+    }, [inView])
+
+
     const copy = () => {
         const copyText = document.querySelector('.email');
         navigator.clipboard.writeText(copyText.textContent)
     }
     return (
-        <div className={`toggle_menu ${menu}`}>
+        <div ref={ref} className={`toggle_menu ${menu}`}>
             <ul itemScope="itemscope" itemType="http://schema.org/SiteNavigationElement" className="cross-site-nav flex">
-                <li data-v-670b333e=""><a data-v-670b333e="" href="https://olaolu.dev/work">My Work</a></li>
-                <li data-v-670b333e=""><a data-v-670b333e="" href="https://olaolu.dev/shelf">My Shelf</a></li>
-                <li data-v-670b333e=""><a data-v-670b333e="" href="https://olaolu.dev/resume" target="_blank" rel="noreferrer noopener">My Résumé</a></li>
+                <motion.li animate={animation} data-v-670b333e=""><a data-v-670b333e="" href="https://olaolu.dev/work">My Work</a></motion.li>
+                <motion.li animate={animation2} data-v-670b333e=""><a data-v-670b333e="" href="https://olaolu.dev/shelf">My Gallary</a></motion.li>
+                <motion.li animate={animation3} data-v-670b333e=""><a data-v-670b333e="" href="https://olaolu.dev/resume" target="_blank" rel="noreferrer noopener">My Résumé</a></motion.li>
             </ul>
-            <div className="basic-contact BsRLL"><span className="say-hello">Say Hello</span>
+            <div className="basic-contact BsRLL">
+                <motion.span animate={animation4} className="say-hello">Say Hello</motion.span>
                 <ul className='mail flex'>
-                    <li data-v-670b333e=""><a data-v-670b333e="" className='email' onClick={copy}>kingsharpn3@gmail.com</a></li>
-                    <li data-v-670b333e=""><a data-v-670b333e="" href="https://t.me/kings_harp" aria-label="t dot me forward slash mrolaolu" target="_blank" rel="noreferrer noopener">t.me/kings_harp</a></li>
+                    <motion.li animate={animation5} data-v-670b333e=""><a data-v-670b333e="" className='email' onClick={copy}>kingsharpn3@gmail.com</a></motion.li>
+                    <motion.li animate={animation6} data-v-670b333e=""><a data-v-670b333e="" href="https://t.me/kings_harp" aria-label="t dot me forward slash kings_harp" target="_blank" rel="noreferrer noopener">t.me/kings_harp</a></motion.li>
                 </ul>
             </div>
-            <ul className="social-contact flex iMAreF"><li data-v-670b333e=""><a data-v-670b333e="" href="https://twitter.com/KingsharpNkans1" aria-label="Olaolu on Twitter" target="_blank" rel="noreferrer noopener">TW</a></li>
-                <li data-v-670b333e=""><a data-v-670b333e="" href="https://github.com/kingsharp21" aria-label="Olaolu on GitHub" target="_blank" rel="noreferrer noopener">GH</a></li>
-                <li data-v-670b333e=""><a data-v-670b333e="" href="https://www.linkedin.com/in/kingsharp-ampedu-nkansah/" aria-label="Olaolu on LinkedIn" target="_blank" rel="noreferrer noopener">LN</a></li>
+            <ul className="social-contact flex iMAreF">
+                <motion.li animate={animation7} data-v-670b333e=""><a data-v-670b333e="" href="https://twitter.com/KingsharpNkans1" aria-label="KingsharpNkans1 on Twitter" target="_blank" rel="noreferrer noopener">TW</a></motion.li>
+                <motion.li animate={animation8} data-v-670b333e=""><a data-v-670b333e="" href="https://github.com/kingsharp21" aria-label="kingsharp21 on GitHub" target="_blank" rel="noreferrer noopener">GH</a></motion.li>
+                <motion.li animate={animation9} data-v-670b333e=""><a data-v-670b333e="" href="https://www.linkedin.com/in/kingsharp-ampedu-nkansah/" aria-label="kingsharp-ampedu-nkansah on LinkedIn" target="_blank" rel="noreferrer noopener">LN</a></motion.li>
                 {/* <li data-v-670b333e=""><a data-v-670b333e="" href="https://youtube.com/channel/UC5UiydmTsiN17NmsYmmWqEA" aria-label="Olaolu's YouTube channel" target="_blank" rel="noreferrer noopener">YT</a></li> */}
             </ul>
         </div>

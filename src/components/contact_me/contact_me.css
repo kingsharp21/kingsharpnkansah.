@@ -1,18 +1,16 @@
 .contact_me{
-    height: 100vh;
-    /* background: var(--black-color); */
-    /* background-color: var(--soft-black-color); */
-    /* background-color: orange; */
+    max-height: 100vh;
+    /* position: relative; */
+    background-color: var(--dark-color);
 }
 .contact_me .wrapper{
-    margin-top: 2rem;
+    padding-top: 3rem;
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* background-color: bisque; */
 }
 .contact_me .wrapper.grid{
     gap: 3rem;
@@ -21,13 +19,12 @@
     flex-direction: column;
 }
 .contact_me .wrapper .heading{
-    font-size: 2.5rem;
-    font-weight: bold;
+    font-size: clamp(40px, 4vw, 80px);
+    font-weight: 700;
     line-height: 1.3;
     max-width: unset;
     margin: 0;
-    color: var(--primary-color);
-    color: var(--black-color);
+    color: var(--white-color);
 }
 .contact_me .wrapper span{
     margin: 0 auto;
@@ -39,9 +36,9 @@
     max-width: 401px;
     text-align: center;
     color: white;
-    color: var(--soft-black-color);
+    color: var(--white-color);
 }
-.visitor-details.grid{
+.visitor-details.flex{
     gap: 4rem;
 }
 .visitor-details .detail-col1.flex{
@@ -51,16 +48,17 @@
 }
 .visitor-details .detail-col1 label,
 .message-col label{
-    margin: 8px 0;
-    color: var(--soft-black-color);
+    margin: 12px 0;
+    font-weight: 600;
+    color: var(--white-color);
 }
 .visitor-details .detail-col1 input{
     border: none;
-    border-bottom: .51px solid var(--black-color);
+    border-bottom: 1.5px solid var(--blue-color);
     padding: .6rem 0;
-    width: 18rem;
+    width: 20rem;
     background-color: transparent;
-    color: var(--black-color);
+    color: var(--white-color);
     font-size: 1rem;
 }
 form{
@@ -71,24 +69,100 @@ form{
 .message-col.flex{
     flex-direction: column;
     align-items: flex-start;
-    margin-bottom: 2rem;
+    /* margin-bottom: 2rem; */
 }
 .message-col textarea{
     width: 100%;
     border: none;
-    padding: 1rem 0;
-    max-height: 3.4rem;
+    max-height: 4.5rem;
     overflow: scroll;
-    border-bottom: 1px solid var(--black-color);
+    border-bottom: 1.5px solid var(--blue-color);
+    color: var(--white-color);
     background: transparent;
-    font-size: .9rem;
+    font-size: 1rem;
     font-weight: 200;
+    margin-bottom: 1rem;
 }
 .message-col textarea:focus,
 .visitor-details .detail-col1 input:focus{
     outline: none;
     background-color: transparent;
 }
-#send-btn{
-    align-self: center;
+
+form .btn{
+    border: 1px solid var(--white-color);
+    margin: 1rem 0;
+}
+.robote{
+    position: absolute;
+    left: 3rem;
+    bottom: 1rem;
+    background: url('../../assets/img/avatar\ standing-and-typing-on-a-phone.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 250px;
+    width: 250px;
+
+}
+.confirmation{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.694);
+    z-index: 10000;
+}
+.confirm-msg-pic{
+    width: 15rem;
+}
+.confirmation .confirm-msg{
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+}
+.confirm-msg .msg{
+    background-color: aliceblue;
+    padding: 2rem;
+}
+
+@media screen and (min-width: 1100px) and (max-width:1970px) {
+	.contact_me{
+		height:100vh ;
+	}
+}
+
+
+
+@media screen and (max-width: 28em) {
+    .contact_me .wrapper{
+        /* margin-top: 2rem; */
+        padding: 2rem;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        /* background-color: bisque; */
+    }
+    .visitor-details .detail-col1 input{
+        border: none;
+        border-bottom: 1.5px solid var(--blue-color);
+        padding: .6rem 0;
+        width: 20rem;
+        background-color: transparent;
+        color: var(--dark-color);
+        font-size: 1rem;
+    }
+    .visitor-details.flex{
+        flex-direction: column;
+    }
+    form{
+        align-self: flex-start;
+    }
+
+
 }

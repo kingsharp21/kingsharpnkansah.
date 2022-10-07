@@ -1,44 +1,47 @@
+import { useEffect } from "react";
+import { useInView } from "react-intersection-observer";
+import { useSelector, useDispatch } from 'react-redux'
+import { showcase } from '../redux/inviewState'
 import './showcase.css'
 import avatar from '../../assets/img/avatar young-man-standing-with-laptop.png'
+import MovingText from 'react-moving-text'
 function Showcase() {
-    
-    return (
-        <header className='showcase section active s1'>
-            <div className="wrapper flex">
-                <div className="intro-text flex">
-                    <div className="text flex">
-                        <div className="flex">
-                        <h1 >Desig</h1>
-                        <h1 id='desig-ner'>ner</h1>
+    const showcasePage = useSelector(state => state.inview.value.showcase)
+    const dispatch = useDispatch()
+    const { ref, inView } = useInView({ threshold: 0.2 });
 
-                        </div>
-                        <h1 style={{ margin: '0 30px', color: 'white'}}>&</h1>
-                        {/* <h1 className='developer'>D </h1> */}
-                        {/* <h1 ><span className='e-letter'>e</span>veloper <span className='dot'>.</span></h1> */}
-                        {/* <h1 className='developer' >Developer <span className='dot'>.</span></h1> */}
-                        {/* <h1 className='developer'><span className='des-D-letter'>D</span>eveloper <span className='dot'>.</span></h1> */}
-                        <div className='flex'>
-                        <h1 className='des-D-letter'>D</h1>
-                        <h1 className='developer'>eveloper <span className='dot'>.</span></h1>
-                        </div>
-                    </div>
-                <div className="intro-words flex">
-                    <span></span>
-                    <span>Skilled at building AI projects that help make life easier and effective. 
-                        <span className='view-Ai'> View AI Projects</span> 
-                    </span>
-                </div>
-                <img className='avatar' src={avatar} alt="avatar" />
-                </div>
-                {/* <div className='scrolldown' style={{color: 'var(--soft-black-color)'}}>
-                    <div className="chevrons">
-                        <div className='chevrondown'></div>
-                        <div className='chevrondown'></div>
-                    </div>
-                </div> */}
+    useEffect(() => {
+        dispatch(showcase(inView)) 
+    }, [inView,showcasePage.payload])
+
+    return (
+        <header ref={ref} className='section active s1 flex' id="showcase">
+            <div className="wrapper flex">
+               <div className="text">
+                <h1>
+                    <span id="sayHello">Hello ! I'm Kingsharp.</span>
+                    <br />
+                    Software Engineer
+                </h1>
+                <div className="billboard flex">
+                    <span>Highly skilled at progressive enhancement, design systems & UI Engineering.</span>
+                    <span>Highly skilled at progressive enhancement, design systems & UI Engineering.</span>
+                </div>   
+               </div>
+               <div aria-label='picture of the developer' className="avator"></div> 
+               {/* <div className=''></div> */}
             </div>
         </header>
     );
 }
+
+{/* <MovingText
+                    type="slideInFromTop"
+                    duration="1300ms"
+                    delay="0s"
+                    // direction="normal"
+                    timing="ease"
+                    iteration="1"
+                    fillMode="none"></MovingText> */}
 
 export default Showcase;

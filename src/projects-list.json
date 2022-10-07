@@ -1,0 +1,30 @@
+{
+    "Project1":{
+        "img":"../../assets/img/web1.jpg",
+        "project_number":"01",
+        "project_type":"WebApp",
+        "project_title":"Designing a Visual Bookmark Manager as a Side Project",
+        "project_des":"The journey of designing my first side project, creating the product and landing page with new experimentation."
+    },
+    "Project2":{
+        "img":"../../assets/img/web2.jpg",
+        "project_number":"02",
+        "project_type":"",
+        "project_title":"",
+        "project_des":""
+    },
+    "Project3":{
+        "img":"",
+        "project_number":"03",
+        "project_type":"",
+        "project_title":"",
+        "project_des":""
+    },
+    "Project4":{
+        "img":"",
+        "project_number":"04",
+        "project_type":"",
+        "project_title":"",
+        "project_des":""
+    }
+}

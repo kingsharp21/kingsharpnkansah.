@@ -1,4 +1,117 @@
+.my-project{
+    /* max-height: 100vh; */
+    background-color: var(--blue-color);
+}
+.project-wrapper.flex{
+    /* height: 90%; */
+    height: 100%;
+    color: aliceblue;
+}
+.project-rigth{
+    display: flex;
+    justify-content: flex-end;
+}
+.project-left{
+    width: 100%;
+    align-self: flex-start;
+}
+.project-rigth{
+    align-self: flex-end;
+}
 .project{
-    height: 100vh;
-    background-color: #AB765D;
+    max-width: 75%;
+    transition: .2s all ease;
+}
+.project:hover{
+    background-color:#410fe723;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+.project h3{
+    margin: 32px 0;
+    font-size: 24px;
+    line-height: 42px;
+    color: var(--white-color);
+}
+.project p{
+    margin: 22px 0;
+    /* font-size: 16px; */
+    font-size: clamp(12px, 1rem, 1rem);
+    line-height: 1.2;
+    color: #adadf7;;
+}
+.project-img{
+    width: 100%;
+}
+.project-img img{
+    width: 100%;
+    height: 230px;
+}
+.project-arrow{
+    position: relative;
+    display: inline-block;
+    background-color: var(--peach-color);
+    height: 1px;
+    width: 40px;
+    top: -5px;
+    margin: 0 20px;
+    transition: width 400ms;
+}
+.project-control{
+    position: absolute;
+    right: 20vw;
+    top: 10vh;
+}
+
+@media screen and (min-width: 1100px) and (max-width:1970px) {
+	.my-project{
+		height:100vh ;
+	}
+}
+
+@media screen and (max-width: 54em) { 
+   
+    
+}
+
+@media screen and (max-width: 40em) {
+
+}
+
+@media screen and (max-width: 36em) {
+	
+}
+
+@media screen and (max-width: 32em) {
+
+}
+
+@media screen and (max-width: 36em) {
+    .my-project{
+        height: auto;
+        
+    }
+    .project-wrapper.grid{
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    .project-rigth{
+        display: flex;
+        justify-content: center;
+    }
+    .project-img{
+        width: 100%;
+    }
+    .project-img img{
+        height: 230px;
+    }
+    .project{
+       max-width: 100%;
+       margin: 2rem 0;
+    }
+    .project h3{
+        margin: 12px 0;
+        font-size: 1rem;
+        font-weight: 800;
+        line-height: 32px;
+    }
 }

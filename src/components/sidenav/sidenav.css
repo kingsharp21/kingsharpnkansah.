@@ -1,8 +1,8 @@
 #section-nav{
-    height: 100px;
+    height: 10rem;
     position: absolute;
-    bottom: 3.5rem;
-    right: 5rem;
+    bottom: 1rem;
+    right: 3rem;
     z-index: 1000;
 }
 #section-nav .wrapper{
@@ -11,23 +11,21 @@
     padding: 0;
 }
 #section-nav .wrapper ul.flex{
+    height: 100%;
+    justify-content: space-around;
     flex-direction: column;
 }
 #section-nav .wrapper ul li button{
-    width: 10px;
-    height: 10px;
+    width: 12px;
+    aspect-ratio: 1;
     margin-bottom: 5px;
-    border-radius: 2px;
-    border: none;
-    background-color: var(--black-color);
-    background-color: var(--primary-color);
-    /* background-color: white; */
-    transition: 1s all linear;
+    border-radius: 50%;
+    transition: .5s all ease-in-out;
     cursor: pointer;
 }
 #section-nav .wrapper ul li button.current{
     transform: rotate(45deg);
-    background-color: var(--black-color);
+    background-color: transparent;
 }
 @media screen and (max-width: 54em) { 
 }
