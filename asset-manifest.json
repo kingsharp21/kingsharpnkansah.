@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/kingsharpnkansah./static/css/main.8670d57b.css",
-    "main.js": "/kingsharpnkansah./static/js/main.a337be94.js",
+    "main.css": "/kingsharpnkansah./static/css/main.77718450.css",
+    "main.js": "/kingsharpnkansah./static/js/main.a5c919f9.js",
+    "static/media/KINGSHARP AMPEDU NKANSAH CV AUG Update.pdf": "/kingsharpnkansah./static/media/KINGSHARP AMPEDU NKANSAH CV AUG Update.c52ab0e7fd47f5e57f50.pdf",
     "static/media/travel.jpg": "/kingsharpnkansah./static/media/travel.d71fb6457574958d35d7.jpg",
     "static/media/avatar on floor-with-phone.png": "/kingsharpnkansah./static/media/avatar on floor-with-phone.904a15a29c1b1b448ae6.png",
     "static/media/handsome2.jpg": "/kingsharpnkansah./static/media/handsome2.3731770d19dda5703299.jpg",
-    "static/media/happy-robot-assistant-waving-hello.png": "/kingsharpnkansah./static/media/happy-robot-assistant-waving-hello.48403327a20ec59f3e08.png",
-    "static/media/avatar standing-and-typing-on-a-phone.png": "/kingsharpnkansah./static/media/avatar standing-and-typing-on-a-phone.ffc960b9e0e892d2385f.png",
+    "static/media/handsome1.jpg": "/kingsharpnkansah./static/media/handsome1.8f0e81fbbd7c83c19a81.jpg",
     "static/media/avatar young-man-standing-with-laptop.png": "/kingsharpnkansah./static/media/avatar young-man-standing-with-laptop.9704ac0206d382b8d1b6.png",
     "static/media/kante.jpg": "/kingsharpnkansah./static/media/kante.dc55a26b8f6226c8ef56.jpg",
     "static/media/guest a number shot.jpg": "/kingsharpnkansah./static/media/guest a number shot.017332d10a3a7045b0eb.jpg",
     "index.html": "/kingsharpnkansah./index.html",
-    "main.8670d57b.css.map": "/kingsharpnkansah./static/css/main.8670d57b.css.map",
-    "main.a337be94.js.map": "/kingsharpnkansah./static/js/main.a337be94.js.map"
+    "main.77718450.css.map": "/kingsharpnkansah./static/css/main.77718450.css.map",
+    "main.a5c919f9.js.map": "/kingsharpnkansah./static/js/main.a5c919f9.js.map"
   },
   "entrypoints": [
-    "static/css/main.8670d57b.css",
-    "static/js/main.a337be94.js"
+    "static/css/main.77718450.css",
+    "static/js/main.a5c919f9.js"
   ]
 }
