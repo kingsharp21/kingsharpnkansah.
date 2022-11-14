@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/kingsharpnkansah./static/css/main.77718450.css",
-    "main.js": "/kingsharpnkansah./static/js/main.a5c919f9.js",
+    "main.css": "/kingsharpnkansah./static/css/main.4c96e259.css",
+    "main.js": "/kingsharpnkansah./static/js/main.1d407072.js",
     "static/media/KINGSHARP AMPEDU NKANSAH CV AUG Update.pdf": "/kingsharpnkansah./static/media/KINGSHARP AMPEDU NKANSAH CV AUG Update.c52ab0e7fd47f5e57f50.pdf",
     "static/media/travel.jpg": "/kingsharpnkansah./static/media/travel.d71fb6457574958d35d7.jpg",
     "static/media/avatar on floor-with-phone.png": "/kingsharpnkansah./static/media/avatar on floor-with-phone.904a15a29c1b1b448ae6.png",
@@ -10,12 +10,13 @@
     "static/media/avatar young-man-standing-with-laptop.png": "/kingsharpnkansah./static/media/avatar young-man-standing-with-laptop.9704ac0206d382b8d1b6.png",
     "static/media/kante.jpg": "/kingsharpnkansah./static/media/kante.dc55a26b8f6226c8ef56.jpg",
     "static/media/guest a number shot.jpg": "/kingsharpnkansah./static/media/guest a number shot.017332d10a3a7045b0eb.jpg",
+    "static/media/portfolio.jpg": "/kingsharpnkansah./static/media/portfolio.8f227c7a4260712cc9d8.jpg",
     "index.html": "/kingsharpnkansah./index.html",
-    "main.77718450.css.map": "/kingsharpnkansah./static/css/main.77718450.css.map",
-    "main.a5c919f9.js.map": "/kingsharpnkansah./static/js/main.a5c919f9.js.map"
+    "main.4c96e259.css.map": "/kingsharpnkansah./static/css/main.4c96e259.css.map",
+    "main.1d407072.js.map": "/kingsharpnkansah./static/js/main.1d407072.js.map"
   },
   "entrypoints": [
-    "static/css/main.77718450.css",
-    "static/js/main.a5c919f9.js"
+    "static/css/main.4c96e259.css",
+    "static/js/main.1d407072.js"
   ]
 }
