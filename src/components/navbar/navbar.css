@@ -21,7 +21,7 @@ nav .nav-wrapper{
     position: relative;
     color: var(--dark-color)
 }
-.akwaaba::after{
+/* .akwaaba::after{
     position: absolute;
     left: 0;
     bottom: 0;
@@ -32,7 +32,7 @@ nav .nav-wrapper{
     background-size: cover;
     background-position: center;
     z-index: -1;
-}
+} */
 
 /* menu btn */
 .backdrop{

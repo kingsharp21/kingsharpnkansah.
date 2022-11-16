@@ -16,10 +16,10 @@ function Sidenav() {
     const curr = document.querySelector('.nav-bullet.current')
     const nav_bullet = Array.from(document.querySelectorAll('.nav-bullet')); 
     useEffect(()=>{
-        if (showcasePage.payload == true) {
+        if (showcasePage.payload === true) {
             setColor('#EEA1BE')
             const index = nav_bullet.indexOf(curr)
-            if (index != 0) {
+            if (index !== 0) {
                 nav_bullet[index].classList.remove('current')
                 nav_bullet[0].classList.add('current')
             }
@@ -30,13 +30,13 @@ function Sidenav() {
             nav_bullet[index].classList.remove('current')
             nav_bullet[1].classList.add('current')
           
-        }else if(projectPage.payload == true){
+        }else if(projectPage.payload === true){
             setColor('#EEA1BE')
             const index = nav_bullet.indexOf(curr)
             nav_bullet[index].classList.remove('current')
             nav_bullet[2].classList.add('current')
           
-        }else if (contactPage.payload == true) {
+        }else if (contactPage.payload === true) {
             setColor('#F3F2F4')
             const index = nav_bullet.indexOf(curr)
             nav_bullet[index].classList.remove('current')

@@ -18,13 +18,13 @@ function Navbar() {
 
 
     useEffect(() => {
-        if (showcasePage.payload == true) {
+        if (showcasePage.payload === true) {
             setColor('#EEA1BE')
         } else if (aboutPage.payload === true) {
             setColor('#420FE7')
-        } else if (projectPage.payload == true) {
+        } else if (projectPage.payload === true) {
             setColor('#EEA1BE')
-        } else if (contactPage.payload == true) {
+        } else if (contactPage.payload === true) {
             setColor('#F3F2F4')
         }
 
@@ -45,7 +45,7 @@ function Navbar() {
         }
     }
     function close() {
-        if (btnAction == 'open') {
+        if (btnAction === 'open') {
             setBtnAction('');
             setBtnOpen(false)
             setMenu('hidden')
