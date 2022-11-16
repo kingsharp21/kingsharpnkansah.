@@ -1,0 +1,83 @@
+.about-me{
+	max-height:auto ;
+	background-color:#f9f9f9;	
+}
+.about-wrapper{
+	width: 100%;
+}
+.eng-text{
+	justify-self: flex-end;
+}
+.about-text p,
+.eng-text p{
+	color: #18033C;
+	max-width: 28rem;
+	font-size: clamp(12px, 1rem, 1rem);
+	text-align: justify;
+
+	line-height: 1.2;
+}
+.header{
+	font-family: "Averta",sans-serif;
+    font-size: 9vw;
+    font-size: clamp(40px, 4vw, 80px);
+	font-weight: bolder;
+    letter-spacing: -.01rem;
+	color: #410fe7;
+	margin: 11px 0;
+}
+
+#cs-pattern-right,
+#cs-pattern-left{
+	align-self: center;
+	justify-self: center;
+}
+
+
+
+
+@media screen and (min-width: 1100px) and (max-width:1970px) {
+	.about-me{
+		height:100vh ;
+	}
+}
+
+@media screen and (min-width: 850px) and (max-width:1100px) {
+    .about-me{
+		padding: 4.5rem 0;
+	}
+	.about-text p,
+	.eng-text p{
+	max-width: none;
+	font-size: clamp(12px, .9rem, 1rem);
+	text-align: justify;
+	}
+	
+  }
+
+@media screen and (max-width: 850px) {
+	.about-me{
+		/* min-height: auto; */
+		padding: 1.5rem 0;
+	}
+	.about-wrapper{
+		max-width: 100%;
+	}
+	#cs-pattern-right,
+	#cs-pattern-left{
+	display: none;
+}
+	.article.grid{
+		grid-template-columns: 1fr;
+	}
+	.about-text,
+	.eng-text{
+		margin: 1rem auto;
+	}
+	.about-text p,
+	.eng-text p{
+	max-width: none;
+	font-size: clamp(12px, .9rem, 1rem);
+	}
+	
+}
