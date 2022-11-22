@@ -17,10 +17,10 @@ nav .nav-wrapper{
     justify-content: space-between;
 }
 
-.akwaaba{
+/* .akwaaba{
     position: relative;
     color: var(--dark-color)
-}
+} */
 /* .akwaaba::after{
     position: absolute;
     left: 0;
