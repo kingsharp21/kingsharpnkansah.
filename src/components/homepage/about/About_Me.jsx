@@ -57,13 +57,16 @@ function About_Me() {
                         </p>
                         <p>Here are a few technologies I’ve been working with recently:</p>
                         <div className="tech grid">
-                            <p>#JavaScript (ES6+)</p>
-                            <p>React.js</p>
-                            <p>Node.js</p>
-                            <p>Redux</p>
-                            <p>MySQL</p>
-                            <p>Git</p>
-                            <p>PHP</p>
+                            <span>JavaScript (ES6+)</span>
+                            <span>React.js</span>
+                            <span>Node.js</span>
+                            <span>Redux</span>
+                            <span>MySQL</span>
+                            <span>Git</span>
+                            <span>PHP</span>
+                            <span>laravel</span>
+                            <span>Mongodb</span>
+                            <span>PostgreSQL</span>
                         </div>
                     </motion.article>
 

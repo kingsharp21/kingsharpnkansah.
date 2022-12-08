@@ -5,8 +5,9 @@
 .about-wrapper{
 	width: 100%;
 }
-.eng-text{
-	justify-self: flex-end;
+.eng-text,
+.about-text{
+	justify-self: center;
 }
 .about-text p,
 .eng-text p{
@@ -14,8 +15,9 @@
 	max-width: 28rem;
 	font-size: clamp(12px, 1rem, 1rem);
 	text-align: justify;
+	margin-top: 8px;
 
-	line-height: 1.2;
+	/* line-height: 1.2; */
 }
 .header{
 	font-family: "Averta",sans-serif;
@@ -31,6 +33,10 @@
 #cs-pattern-left{
 	align-self: center;
 	justify-self: center;
+}
+
+.tech.grid{
+	grid-template-columns: repeat(3,1fr);
 }
 
 
