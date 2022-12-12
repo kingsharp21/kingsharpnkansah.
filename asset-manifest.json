@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/kingsharpnkansah./static/css/main.e7d36e86.css",
+    "main.css": "/kingsharpnkansah./static/css/main.325bf296.css",
     "main.js": "/kingsharpnkansah./static/js/main.ac2ddef6.js",
     "static/media/KINGSHARP AMPEDU NKANSAH CV AUG Update.pdf": "/kingsharpnkansah./static/media/KINGSHARP AMPEDU NKANSAH CV AUG Update.c52ab0e7fd47f5e57f50.pdf",
     "static/media/travel.jpg": "/kingsharpnkansah./static/media/travel.d71fb6457574958d35d7.jpg",
@@ -12,11 +12,11 @@
     "static/media/guest a number shot.jpg": "/kingsharpnkansah./static/media/guest a number shot.017332d10a3a7045b0eb.jpg",
     "static/media/portfolio.jpg": "/kingsharpnkansah./static/media/portfolio.8f227c7a4260712cc9d8.jpg",
     "index.html": "/kingsharpnkansah./index.html",
-    "main.e7d36e86.css.map": "/kingsharpnkansah./static/css/main.e7d36e86.css.map",
+    "main.325bf296.css.map": "/kingsharpnkansah./static/css/main.325bf296.css.map",
     "main.ac2ddef6.js.map": "/kingsharpnkansah./static/js/main.ac2ddef6.js.map"
   },
   "entrypoints": [
-    "static/css/main.e7d36e86.css",
+    "static/css/main.325bf296.css",
     "static/js/main.ac2ddef6.js"
   ]
 }
