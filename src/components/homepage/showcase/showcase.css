@@ -1,0 +1,150 @@
+header{
+    max-height: 100vh;
+    background: var(--blue-color);
+    z-index: 0;
+}
+header .wrapper.flex{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    align-items: flex-end;
+
+}
+header .wrapper .text{
+    width: 100%;
+}
+#sayHello{
+    font-family: "Averta",sans-serif;
+    font-size: 9vw;
+    line-height: 9.4vw;
+    color: rgba(0,0,0,0);
+    -webkit-text-stroke: 1px #CECAE3;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+header .wrapper .text h1{
+    font-size: clamp(3.5rem, 6.6vw, 8vw);
+    font-weight: bolder;
+    letter-spacing: .1rem;
+    line-height: 1.2;
+    color: var(--white-color);
+}
+
+
+.highlight{
+    max-width: 600px;
+    color: var(--dark-color);
+}
+.avator{
+    position: absolute;
+    bottom: 0rem;
+    right: 0rem;
+    width: 50%;
+    aspect-ratio: 1;
+    background-color: var(--dark-color);
+    background-image: linear-gradient(to bottom, #410fe72e,#410fe752 ),url('../../../assets/img/handsome2.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+    /* border-radius: 0 0 50% 50%; */
+    cursor: pointer;
+}
+.avator:hover{
+    z-index: 100;
+    background-image: linear-gradient(to bottom, #410fe700,#410fe700 ),url('../../../assets/img/handsome2.jpg');
+
+}
+
+/* The animation code */
+
+
+@media screen and (min-width: 1100px) and (max-width:1970px) {
+    header{
+        padding: 5rem 0;
+    }
+  }
+
+@media screen and (min-width: 550px) and (max-width:1100px) {
+    header{
+        padding: .5rem 0;
+        /* background-color: chocolate; */
+    }
+    .highlight{
+        max-width: 300px;
+        align-items: flex-start;
+        margin: 3rem 0;
+        gap: 1rem;
+    }
+    .highlight span{
+        font-size: .5rem;
+        font-weight: 400;
+        
+    }
+    #sayHello{
+        font-size: 8vw;
+        line-height: 9.4vw;
+    }
+    
+    header .wrapper .text h1{
+        font-size: clamp(1.5rem, 6.6vw, 8vw);
+    }
+    .avator{
+        bottom: 3rem;
+    }
+  }
+
+@media screen and (max-width: 550px) {
+    header{
+        min-height: 100vh;
+        max-height: unset;
+        margin: 0;
+        padding: 0;
+    }
+    header .wrapper.flex{
+        flex-direction: column;
+        justify-content: space-between;
+        width: 80%;
+        padding: 1rem 0;
+    
+    }
+    header .wrapper .text{
+        width: 100%;
+        /* margin-top: 3rem; */
+    }
+    .highlight.grid{
+        align-items: flex-start;
+        margin: 2rem 0;
+        gap: 1rem;
+    }
+    #sayHello{
+        font-family: "Averta",sans-serif;
+        font-size: 13vw;
+        line-height: 9.4vw;
+       
+    }
+    header .wrapper .text h1{
+        font-size: clamp(3rem, 4.6vw, 4vw);
+    }
+
+    .avator{
+        margin: 3rem auto;
+        position: unset;
+        width: 50%;
+        aspect-ratio: 1;
+    }
+    .avator{
+        margin: 0rem auto;
+        position: unset;
+        width: 100%;
+        aspect-ratio: 1;
+    }
+    .highlight span{
+        font-size: 11px;
+        font-weight: 500;
+    }
+      
+}
+

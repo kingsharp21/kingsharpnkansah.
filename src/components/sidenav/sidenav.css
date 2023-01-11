@@ -25,8 +25,9 @@
 }
 #section-nav .wrapper ul li button.current{
     transform: rotate(45deg);
-    background-color: transparent;
+    background-color: transparent !important;
 }
+
 @media screen and (max-width: 54em) { 
 }
 
@@ -39,7 +40,7 @@
 @media screen and (max-width: 32em) {
 }
 
-@media screen and (max-width: 28em) {
+@media screen and (max-width: 1100px)  {
     #section-nav{
         display: none;
     }
